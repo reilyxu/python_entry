@@ -1,0 +1,48 @@
+#9-1 restaurant
+class Restaurant():
+	"""创建一个名为Restaurant的类"""
+	def __init__(self,restaurant_name,cuisine_type):
+		"""初始化属性"""
+		self.restaurant_name=restaurant_name
+		self.cuisine_type=cuisine_type
+	def describe_restaurant(self):
+  """方法1:打印两个属性"""
+		print(self.restaurant_name.title()+" provides "+
+			self.cuisine_type+".")
+	def open_restaurant(self):
+  """方法2:打印开张中"""
+		print(self.restaurant_name.title()+" is opening!")
+
+restaurant=Restaurant('KFC','Fast Food')
+print(restaurant.restaurant_name+" "+restaurant.cuisine_type)
+restaurant.describe_restaurant()
+"""调用方法1"""
+restaurant.open_restaurant()
+
+#9-2 3 restaurant
+restaurant1=Restaurant('hai di lao','hotpod')
+restaurant2=Restaurant('mei zhou dong po','chuan')
+restaurant1.describe_restaurant()
+restaurant2.describe_restaurant()
+"""省略"""
+
+#9-3 user
+class Users():
+"""用户信息的类"""
+	def __init__(self,first_name,last_name,gender,age):
+		self.first_name=first_name
+		self.last_name=last_name
+		self.gender=gender
+		self.age=age
+	def describe_user(self):
+  """打印信息"""
+		print(self.first_name.title()+", "+self.last_name.title()
+			+", "+self.gender+", "+str(self.age))
+	def greet_user(self):
+  """打招呼"""
+		print("Hello! "+self.first_name.title()+" "+self.
+			last_name.title())
+
+user1=Users('reily','xu','female','22')
+user1.describe_user()
+user1.greet_user()
