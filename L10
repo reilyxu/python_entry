@@ -123,3 +123,26 @@ def count_words(filename,word):
 
 count_words('Pride_and_Prejudice.txt','the')
 count_words('Pride_and_Prejudice.txt','love')
+
+
+#10-11 喜欢的数字
+##f_number_dump.py
+import json
+
+f_number=input("What is your favorite number?")
+
+filename='f_number.json'
+with open(filename,'w') as f_obj:
+	json.dump(f_number,f_obj)
+	print("We'll remember your favorite number! it's "+str(f_number)+".")
+	
+##f_number_load.py
+import json
+
+filename='f_number.json'
+
+with open('f_number.json') as f_obj:
+	f_number=json.load(f_obj)
+	print("We know your favorite number! It's "+f_number+'.')
+
+
